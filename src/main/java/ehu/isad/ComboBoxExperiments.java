@@ -1,5 +1,6 @@
 package ehu.isad;
 
+import com.google.gson.Gson;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
@@ -37,7 +38,9 @@ public class ComboBoxExperiments extends Application  {
             mota1 = mota1.toLowerCase();
             try {
                 System.out.printf(this.web(mota1));
-                label.setText("1"+mota1.toUpperCase()+"=");
+                Gson gson= new Gson();
+                Txanpona txanpon = gson.fromJson(this.web(mota1),Txanpona.class);
+                label.setText("1"+mota1.toUpperCase()+"="+Float.toString(txanpon.price));
 
             } catch (Exception exception) {
                 exception.printStackTrace();
@@ -57,9 +60,9 @@ public class ComboBoxExperiments extends Application  {
             String inputLine = in.readLine();
             in.close();
             System.out.printf(inputLine);
-            label.setText("1"+mota.toUpperCase()+"=");
-            //Gson gson= new Gson();
-            //Txanpona txanpon = gson.fromJson(inputLine,Txanpona.class);
+            Gson gson= new Gson();
+            Txanpona txanpon = gson.fromJson(inputLine,Txanpona.class);
+            label.setText("1"+mota.toUpperCase()+"="+Float.toString(txanpon.price));
     }
     public String web(String pMota) throws Exception{
         URL webdiru = new URL("https://api.gdax.com/products/" + pMota + "-eur/ticker");
