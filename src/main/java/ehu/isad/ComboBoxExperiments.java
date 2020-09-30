@@ -106,7 +106,7 @@ public class ComboBoxExperiments extends Application  {
                 new Argazki("Sagarra", "sagarra.jpeg"),
                 new Argazki("Sandia", "sandia.png")
         ));
-        comboBilduma.setItems(bildumaList);
+        comboBilduma.getSelectionModel().selectFirst();
         ObservableList<Argazki> argazkiList = FXCollections.observableArrayList();
         argazkiList.addAll(bildumaMap.get("abereak"));
         listViewOfArgazki = new ListView<>(argazkiList);
