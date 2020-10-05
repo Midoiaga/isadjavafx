@@ -142,13 +142,7 @@ public class ComboBoxExperiments extends Application  {
         return SwingFXUtils.toFXImage(reader, null);
 
     }
-    public String web(String pMota) throws Exception{
-        URL webdiru = new URL("https://api.gdax.com/products/" + pMota + "-eur/ticker");
-        BufferedReader in = new BufferedReader(new InputStreamReader(webdiru.openStream()));
-        String inputLine = in.readLine();
-        in.close();
-        return inputLine;
-    }
+
 
     public static void main(String[] args) {
         Application.launch(args);
