@@ -18,7 +18,7 @@ import java.io.InputStream;
 public class Kaktusa extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        InputStream is = getClass().getResourceAsStream("/cactus.jpg");
+        InputStream is = getClass().getResourceAsStream("/cactus.png");
         BufferedImage reader = ImageIO.read(is);
         Image image = SwingFXUtils.toFXImage(reader,null);
         ImageView imageView = new ImageView(image);
@@ -29,7 +29,7 @@ public class Kaktusa extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    public static void main(String[] args) {
-        Application.launch(args);
-    }
+  //  public static void main(String[] args) {
+   //     Application.launch(args);
+   // }
 }

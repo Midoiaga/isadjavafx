@@ -34,55 +34,7 @@ public class ComboBoxExperiments extends Application  {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//////////      BITCOIN      //////////////////////////////////////////////////////////
-//        primaryStage.setTitle("ComboBox Experiment 1");
-//        String mota="";
-//        ComboBox comboBox = new ComboBox();
-//
-//        Label label = new Label();
-//        comboBox.getItems().add("BTC");
-//        comboBox.getItems().add("ETH");
-//        comboBox.getItems().add("LTC");
-//        comboBox.setEditable(false);
-//        comboBox.getSelectionModel().selectFirst();
-//        comboBox.setOnAction(e -> {
-//            System.out.println( comboBox.getValue());
-//            String mota1 = (String) comboBox.getValue();
-//            //System.out.printf(mota);
-//            mota1 = mota1.toLowerCase();
-//            try {
-//                System.out.printf(this.web(mota1));
-//                Gson gson= new Gson();
-//                Txanpona txanpon = gson.fromJson(this.web(mota1),Txanpona.class);
-//                label.setText("1"+mota1.toUpperCase()+"="+Float.toString(txanpon.price));
-//
-//            } catch (Exception exception) {
-//                exception.printStackTrace();
-//            }
-//        });
 
-     /*        mota = (String) comboBox.getValue();
-            //System.out.printf(mota);
-            mota = mota.toLowerCase();
-            URL webdiru = new URL("https://api.gdax.com/products/" + mota + "-eur/ticker");
-            BufferedReader in = new BufferedReader(new InputStreamReader(webdiru.openStream()));
-            String inputLine = in.readLine();
-            in.close();
-            System.out.printf(inputLine);
-            Gson gson= new Gson();
-            Txanpona txanpon = gson.fromJson(inputLine,Txanpona.class);
-            label.setText("1"+mota.toUpperCase()+"="+Float.toString(txanpon.price));
-    */
-        //////////////////////////////////////////////////////////////////////
-        /////////////////// CACTUS/////////////////////////////////////////////
-//        InputStream is = getClass().getResourceAsStream("/cactus.jpg");
-//        BufferedImage reader = ImageIO.read(is);
-//        Image image = SwingFXUtils.toFXImage(reader,null);
-//        ImageView imageView = new ImageView(image);
-//        VBox vbox = new VBox(imageView);
-//        vbox.setAlignment(Pos.BASELINE_CENTER);
-//        vbox.setPadding(new Insets(10,0,0,0));
-        /////////////////////////////////////////////////////////////////////
         ListView<Argazki> listViewOfArgazki;
         ImageView imageView= new ImageView();
         ComboBox comboBilduma;

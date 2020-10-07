@@ -27,9 +27,7 @@ public class TxanponAriketa extends Application {
         comboBox.setEditable(false);
         comboBox.getSelectionModel().selectFirst();
         comboBox.setOnAction(e -> {
-            System.out.println( comboBox.getValue());
             String mota1 = (String) comboBox.getValue();
-            //System.out.printf(mota);
             mota1 = mota1.toLowerCase();
             try {
                 Gson gson= new Gson();
